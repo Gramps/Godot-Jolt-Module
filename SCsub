@@ -1,0 +1,9 @@
+# SCsub
+Import('env')
+
+module_path = Dir('.').srcnode().abspath
+
+env.Append(CPPPATH=["%s/Jolt/" % module_path])
+env.Append(CPPPATH=["%s/godot_jolt/" % module_path])
+
+env.add_source_files(env.modules_sources,"*.cpp")
